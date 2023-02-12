@@ -1,0 +1,17 @@
+mixin tourItem(image, price, title, review, reviewCount, duration)
+    .tour 
+        .tour__top 
+            img.tour__img(src= image , alt="")
+            span.tour__price=price 
+        .tour__content 
+            h3.tour__title=title 
+            .tour__rating 
+                .tour__review 
+                    .tour__star 
+                        img(src="./src/img/Shape.png", alt="")
+                    .tour__count 
+                        span= review
+                            |  (#{reviewCount} reviews)
+                span.tour__duration Duration : #{duration} Hours 
+            a.tour__link(href="#!" target="_blank" rel="noopener") Tours Price 61$
+            
