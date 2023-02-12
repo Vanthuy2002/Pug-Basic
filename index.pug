@@ -1,0 +1,30 @@
+mixin tourItem(image, price, title)
+    .tour 
+        .tour__top 
+            img.tour__img(src= image , alt="")
+            span.tour__price=price 
+        .tour__content 
+            h3.tour__title=title 
+            .tour__rating 
+                .tour__review 
+                    .tour__star 
+                        img(src="./src/img/Shape.png", alt="")
+                    .tour__count 
+                        span 4.8 (12 reviews)
+                span.tour__duration Duration : 9 hours 
+            a.tour__link(href="#!" target="_blank" rel="noopener") Tours Price 61$
+            
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Plan-Trip
+        link(rel="stylesheet" href="./src/style.css")
+    body 
+        .tour__list 
+           +tourItem("https://images.pexels.com/photos/14255782/pexels-photo-14255782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "From $40", "Thailands Ayutthaya Temples Cruise from Bangkok")
+           +tourItem("https://images.pexels.com/photos/11879709/pexels-photo-11879709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","From $70", "FLoating Markets Day Trip from Bangkok")
+           +tourItem("https://images.pexels.com/photos/10049618/pexels-photo-10049618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "From $50", "Bangkok Dinner Cruise on the Chao Phraya River")
