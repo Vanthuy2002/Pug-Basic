@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -115,4 +126,74 @@ body {
   .tour {
     width: calc(50% - 20px);
   }
+}
+
+/* popular things */
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.popular__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.popular__item {
+  width: calc(25% - 20px);
+  margin-left: 20px;
+  box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.popular__image {
+  position: relative;
+  height: 250px;
+}
+.popular__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.popular__label {
+  line-height: 15px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 4px 18px;
+  color: #f5f5f5;
+  position: absolute;
+  right: 20px;
+  bottom: -11.5px;
+  background-color: #3b71fe;
+}
+.popular__content {
+  padding: 11px 20px;
+}
+.popular__time {
+  font-size: 9px;
+  line-height: 11px;
+  color: #777e90;
+}
+.popular__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #353945;
+  margin: 8px 0;
+}
+.popular__review {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.popular__overlay {
+  position: absolute;
+  background: linear-gradient(
+    24.19deg,
+    rgba(4, 4, 4, 0.52) 0.23%,
+    rgba(4, 4, 4, 0) 55.52%
+  );
+  inset: 0;
 }
