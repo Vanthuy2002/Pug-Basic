@@ -1,0 +1,30 @@
+mixin tourItem(image, price, title, review, reviewCount, duration)
+    .tour 
+        .tour__top 
+            img.tour__img(src= image , alt="")
+            span.tour__price=price 
+        .tour__content 
+            h3.tour__title=title 
+            .tour__rating 
+                .tour__review 
+                    .tour__star 
+                        img(src="./src/img/Shape.png", alt="")
+                    .tour__count 
+                        span= review
+                            |  (#{reviewCount} reviews)
+                span.tour__duration Duration : #{duration} Hours 
+            a.tour__link(href="#!" target="_blank" rel="noopener") Tours Price 61$
+                
+mixin popularItem(title)
+    .popular__item 
+        .popular__image 
+            .popular__overlay 
+            img.popular__img(src="./src/img/anh-2.jpeg", alt="")
+            span.popular__label Must see 
+        .popular__content 
+            span.popular__time Sep 28 10:00 AM - 1:00 PM
+            h3.popular__title=title  
+            .popular__review 
+                img(src="./src/img/Shape.png", alt="")
+                span 4.8 (12 review)
+    
