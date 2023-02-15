@@ -15,7 +15,7 @@ mixin tourItem(image, price, title, review, reviewCount, duration)
                 span.tour__duration Duration : #{duration} Hours 
             a.tour__link(href="#!" target="_blank" rel="noopener") Tours Price 61$
                 
-mixin popularItem()
+mixin popularItem(title)
     .popular__item 
         .popular__image 
             .popular__overlay 
@@ -23,7 +23,7 @@ mixin popularItem()
             span.popular__label Must see 
         .popular__content 
             span.popular__time Sep 28 10:00 AM - 1:00 PM
-            h3.popular__title The Grand Palace 
+            h3.popular__title=title  
             .popular__review 
                 img(src="./src/img/Shape.png", alt="")
                 span 4.8 (12 review)
