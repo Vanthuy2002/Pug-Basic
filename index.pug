@@ -10,8 +10,17 @@ html(lang="en")
         link(rel="stylesheet" href="./src/style.css")
     body 
         .container
-            .popular-list
-                +popularItem("The Grand Palace")
-                +popularItem("Chatuchak Weekend Market")
-                +popularItem("Wat Pho")
-                +popularItem("City of Angels")
+            section.section-tour 
+                h2.tour-heading Top Bang Kok Tours
+                .tour-list 
+                    +tourItem("https://images.pexels.com/photos/13010254/pexels-photo-13010254.jpeg?auto=compress&cs=tinysrgb&w=600","Thailands Ayutthaya Temples Cruise from Bangkok", "10 Hours", 55)
+                    +tourItem("https://images.pexels.com/photos/6774284/pexels-photo-6774284.jpeg?auto=compress&cs=tinysrgb&w=600","FLoating Markets Day Trip from Bangkok", "8 Hours", 85)
+                    +tourItem("https://images.pexels.com/photos/4202918/pexels-photo-4202918.jpeg?auto=compress&cs=tinysrgb&w=600", "Bangkok Dinner Cruise on the Chao Phraya River", "12 Hours", 60)
+
+            section.section-popular
+                h2.tour-heading Popular travel in BangKok
+                .popular-list 
+                    +popularItem() 
+                    +popularItem() 
+                    +popularItem() 
+                    +popularItem() 
