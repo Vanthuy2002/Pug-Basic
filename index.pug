@@ -34,4 +34,21 @@ html(lang="en")
                 h2.tour-heading Diamond in BangKok
                 .diamond-list 
                     +diamondItem("BangKok Trip", "27 Sep, 2020")
+                .diamond-btn 
+                    +buttonTravel()
+            
+            section.section-footer 
+                .footer-top
+                    .footer-columns 
+                        .footer-logo 
+                            a(href="/")
+                                img(srcset="./src/img/logo.png 2x", alt="Airtrax")
+                        p.footer-desc Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+                    .footer-columns 
+                        +footerItem("Sevices")
+                    .footer-columns 
+                        +footerItem("Supports")
+                    .footer-columns 
+                        +footerItem("Business")
+
 
