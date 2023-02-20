@@ -1,0 +1,23 @@
+section.section-footer 
+    .footer-top
+        .footer-columns 
+            .footer-logo 
+                a(href="/")
+                    img(srcset="./src/img/logo.png 2x", alt="Airtrax")
+            p.footer-desc Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+            form(action="" autocomplete="on").footer-subscribe 
+                input.subscribe-input(type="emali" name="email" placeholder="Enter your email")
+                button.subscribe-btn(type="submit") 
+                    img(srcset="./src/img/circle.png", alt="icon")
+        .footer-columns 
+            +footerItem("Sevices")
+        .footer-columns 
+            +footerItem("Supports")
+        .footer-columns 
+            +footerItem("Business")
+    .footer-bottom 
+        p.footer-copyright Copyright© 2021 UIHUT LLC. All rights reserved
+        .footer-icon 
+            each icon in ["./src/img/linkedin.png","./src/img/linkedin.png","./src/img/linkedin.png","./src/img/linkedin.png"]
+                .footer-social 
+                    img(src=icon , alt="")

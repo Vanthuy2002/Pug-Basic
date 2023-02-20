@@ -10,56 +10,11 @@ html(lang="en")
         link(rel="stylesheet" href="./src/style.css")
     body 
         .container
-            section.section-tour 
-                h2.tour-heading Top Bang Kok Tours
-                .tour-list 
-                    +tourItem("https://images.pexels.com/photos/13010254/pexels-photo-13010254.jpeg?auto=compress&cs=tinysrgb&w=600","Thailands Ayutthaya Temples Cruise from Bangkok", "10 Hours", 55)
-                    +tourItem("https://images.pexels.com/photos/6774284/pexels-photo-6774284.jpeg?auto=compress&cs=tinysrgb&w=600","FLoating Markets Day Trip from Bangkok", "8 Hours", 85)
-                    +tourItem("https://images.pexels.com/photos/4202918/pexels-photo-4202918.jpeg?auto=compress&cs=tinysrgb&w=600", "Bangkok Dinner Cruise on the Chao Phraya River", "12 Hours", 60)
-
-            section.section-popular
-                h2.tour-heading Popular travel in BangKok
-                .popular-list 
-                    +popularItem("The Grand Balet") 
-                    +popularItem("Chatuchak Weekend") 
-                    +popularItem("Wat Pho") 
-                    +popularItem("Temple Of Dawn") 
-
-            section.section-gem
-                h2.tour-heading Hidden gems in Bangkok
-                .gem-list 
-                    +gemItem()
-
-            section.section-diamond 
-                h2.tour-heading Diamond in BangKok
-                .diamond-list 
-                    +diamondItem("BangKok Trip", "27 Sep, 2020")
-                .diamond-btn 
-                    +buttonTravel()
-            
-            section.section-footer 
-                .footer-top
-                    .footer-columns 
-                        .footer-logo 
-                            a(href="/")
-                                img(srcset="./src/img/logo.png 2x", alt="Airtrax")
-                        p.footer-desc Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
-                        form(action="" autocomplete="on").footer-subscribe 
-                            input.subscribe-input(type="emali" name="email" placeholder="Enter your email")
-                            button.subscribe-btn(type="submit") 
-                                img(srcset="./src/img/circle.png", alt="icon")
-                    .footer-columns 
-                        +footerItem("Sevices")
-                    .footer-columns 
-                        +footerItem("Supports")
-                    .footer-columns 
-                        +footerItem("Business")
-                .footer-bottom 
-                    p.footer-copyright Copyright© 2021 UIHUT LLC. All rights reserved
-                    .footer-icon 
-                        each icon in ["./src/img/linkedin.png","./src/img/linkedin.png","./src/img/linkedin.png","./src/img/linkedin.png"]
-                            .footer-social 
-                                img(src=icon , alt="")
-                    
+            include ./views/layout/header
+            include ./views/home/top-tuor
+            include ./views/home/popular
+            include ./views/home/gem
+            include ./views/home/diamond
+            include ./views/layout/footer
 
 
