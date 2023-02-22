@@ -1,88 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap");
-@import "reset";
-@import "general";
-@import "tour";
-@import "popular";
-@import "diamond";
-@import "footer";
-@import "gem";
+@import "./base/reset";
+@import "./base/general";
+
+@import "./layout/header";
+@import "./page/tour";
+@import "./page/popular";
+@import "./page/diamond";
+@import "./page/gem";
+@import "./page/reponsive.scss";
+@import "./layout/footer";
 
 .section-gem,
 .section-popular,
 .section-tour {
   margin-bottom: 70px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-columns:first-child {
-    max-width: 270px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023.98px) {
-  .tour-item {
-    width: calc(50% - 20px);
-  }
-  .popular-list {
-    --columns: 2;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .gem-list {
-    grid-template-rows: repeat(2, 150px) 100px;
-  }
-  .popular-item {
-    width: 100%;
-  }
-  .tour-item {
-    width: 100%;
-  }
-  .tour-heading {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  .popular-list {
-    --columns: 1;
-  }
-  .diamond-list {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    grid-template-rows: auto;
-    grid-auto-flow: row;
-  }
-  .diamond-wrapper {
-    height: 133px;
-  }
-  .diamond-item {
-    padding: 7px;
-  }
-  .diamond-title {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 5px;
-  }
-  .diamond-item {
-    font-size: 10px;
-  }
-  .diamond-btn {
-    margin: 30px 0;
-  }
-  .btn-travel {
-    width: 120px;
-    height: 32px;
-    padding: 4px 19px;
-    font-size: 16px;
-    border-radius: 20px;
-  }
-  .footer {
-    padding: 30px 0;
-  }
-  .footer-bottom,
-  .footer-top {
-    flex-direction: column;
-  }
-  .footer-bottom {
-    gap: 20px;
-  }
 }
