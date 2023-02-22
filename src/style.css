@@ -46,12 +46,63 @@ body {
   line-height: 1.5;
 }
 
+.btn-travel {
+  width: 200px;
+  height: 56px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 30px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 16px 0;
+  margin-bottom: 70px;
+  box-shadow: 0px 6px 30px rgba(15, 15, 15, 0.06);
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.header-item {
+  padding: 14px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: 10px;
+  background-color: #f4f5f9;
+  color: #777e90;
+  cursor: pointer;
+  transition: all linear 0.5s;
+  text-decoration: none;
+  display: inline-block;
+}
+.header-item:hover:not(:nth-child(2)) {
+  background-color: #225df3;
+  color: white;
+}
+.header-item:nth-child(2) {
+  color: white;
+  background-color: #225df3;
+}
+
 /* tour-list */
 .tour-list {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -60,6 +111,11 @@ body {
   width: calc(33.33% - 20px);
   background-color: white;
   border-radius: 14px;
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .tour-top {
@@ -88,7 +144,13 @@ body {
 }
 
 .tour-content {
+  flex: 1;
   padding: 20px 20px 14px;
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .tour-title {
@@ -96,12 +158,6 @@ body {
   line-height: 1.5;
   color: #23262f;
   margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
 }
 
 .tour-review {
@@ -109,6 +165,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: auto;
 }
 
 .tour-rating {
@@ -136,6 +193,7 @@ body {
 }
 
 .tour-link {
+  text-align: center;
   display: inline-block;
   text-decoration: none;
   padding: 9px 17px;
@@ -147,8 +205,7 @@ body {
 /* popular-item */
 .popular-list {
   display: grid;
-  --columns: 4;
-  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 30px;
 }
 .popular-list .popular-item {
@@ -298,21 +355,6 @@ body {
   grid-row: -1/-3;
 }
 
-.btn-travel {
-  width: 200px;
-  height: 56px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 40px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 30px;
-}
-
 @media screen and (min-width: 768px) {
   .footer-columns:first-child {
     max-width: 270px;
@@ -322,9 +364,6 @@ body {
   .tour-item {
     width: calc(50% - 20px);
   }
-  .popular-list {
-    --columns: 2;
-  }
 }
 @media screen and (max-width: 767.98px) {
   .gem-list {
@@ -333,15 +372,9 @@ body {
   .popular-item {
     width: 100%;
   }
-  .tour-item {
-    width: 100%;
-  }
   .tour-heading {
     font-size: 18px;
     margin-bottom: 30px;
-  }
-  .popular-list {
-    --columns: 1;
   }
   .diamond-list {
     grid-template-columns: 1fr;

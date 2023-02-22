@@ -3,7 +3,7 @@
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -11,6 +11,7 @@
   width: calc(33.33% - 20px);
   background-color: white;
   border-radius: 14px;
+  @include flex(stretch, start, column);
 }
 .tour-top {
   position: relative;
@@ -35,19 +36,15 @@
   color: #fcfcfd;
 }
 .tour-content {
+  flex: 1;
   padding: 20px 20px 14px;
+  @include flex(stretch, start, column);
 }
 .tour-title {
   font-size: 18px;
   line-height: 1.5;
   color: #23262f;
   margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
 }
 
 .tour-review {
@@ -55,6 +52,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: auto;
 }
 .tour-rating {
   display: flex;
@@ -76,6 +74,7 @@
   color: #043a4c;
 }
 .tour-link {
+  text-align: center;
   display: inline-block;
   text-decoration: none;
   padding: 9px 17px;

@@ -1,0 +1,50 @@
+@mixin size($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  @if ($radius > 0) {
+    border-radius: $radius;
+  }
+}
+@mixin flex(
+  $align-items: center,
+  $justify-content: center,
+  $flex-direction: row,
+  $flex-wrap: nowrap
+) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin flexOptimized($options) {
+  display: flex;
+  flex-direction: map-get($options, fd);
+  align-items: map-get($option, ai);
+  justify-content: map-get($option, jc);
+  flex-wrap: map-get($option, fw);
+}
+
+@mixin link($display) {
+  text-decoration: none;
+  display: $display;
+}
+
+@mixin minWidth($breakpoint: 0) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin minMax($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

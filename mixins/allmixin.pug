@@ -17,7 +17,7 @@ mixin tourItem(image, title, duration, price)
 mixin popularItem(title)
     .popular-item 
         .popular-image
-            img.popular-img(src="https://source.unsplash.com/random", alt="random")
+            img.popular-img(src="https://images.pexels.com/photos/15110059/pexels-photo-15110059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="random")
             span.popular-label Must see 
         .popular-content 
             span.popular-time Sep 28 10:00 AM - 1:00 PM
@@ -25,6 +25,11 @@ mixin popularItem(title)
             .popular-review 
                 img(src="./src/img/Shape.png", alt="").popular-star
                 span.popular-count 4.8 (12 reviews)
+mixin layoutItem()
+    .layout-list 
+        each val in [1,2,3,4,5,6]
+            .layout-item=val
+        
 
 mixin gemItem()
     each val in ["https://images.pexels.com/photos/605494/pexels-photo-605494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/14893338/pexels-photo-14893338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/6195044/pexels-photo-6195044.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/15532728/pexels-photo-15532728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/13933559/pexels-photo-13933559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]

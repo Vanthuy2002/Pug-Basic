@@ -2,6 +2,9 @@
 @import "./base/reset";
 @import "./base/general";
 
+@import "./components/button";
+@import "./abstarcts/mixin.scss";
+
 @import "./layout/header";
 @import "./page/tour";
 @import "./page/popular";
