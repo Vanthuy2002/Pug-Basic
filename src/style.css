@@ -1,19 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-:root {
-  --primary-color: #3b71fe;
-  --secondary-color: #043a4c;
-  --text-color: #353945;
-  --fzdefault: 14px;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap");
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 img,
 picture,
 svg,
@@ -21,22 +17,27 @@ video {
   display: block;
   max-width: 100%;
 }
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   background-color: #f5f5f5;
   padding: 24px;
 }
+
+:root {
+  --primary-color: #3b71fe;
+  --secondary-color: #043a4c;
+  --text-color: #353945;
+  --fzdefault: 14px;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
 }
-.section-gem,
-.section-popular,
-.section-tour {
-  margin-bottom: 70px;
-}
+
 .tour-heading {
   color: var(--text-color);
   margin-bottom: 34px;
@@ -44,6 +45,7 @@ body {
   font-size: 30px;
   line-height: 1.5;
 }
+
 /* tour-list */
 .tour-list {
   margin: 20px 0;
@@ -53,14 +55,17 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .tour-item {
   width: calc(33.33% - 20px);
   background-color: white;
   border-radius: 14px;
 }
+
 .tour-top {
   position: relative;
 }
+
 .tour-top .tour-img {
   width: 100%;
   height: 240px;
@@ -68,6 +73,7 @@ body {
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
 }
+
 .tour-price span {
   display: inline-block;
   position: absolute;
@@ -80,9 +86,11 @@ body {
   border-radius: 5px;
   color: #fcfcfd;
 }
+
 .tour-content {
   padding: 20px 20px 14px;
 }
+
 .tour-title {
   font-size: 18px;
   line-height: 1.5;
@@ -102,25 +110,31 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+
 .tour-rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .tour-star {
   margin-right: 8px;
 }
+
 .tour-count {
   display: inline-block;
 }
+
 .tour-link,
 .tour-count,
 .tour-duration {
   font-size: 14px;
 }
+
 .tour-duration {
   color: #043a4c;
 }
+
 .tour-link {
   display: inline-block;
   text-decoration: none;
@@ -137,14 +151,14 @@ body {
   grid-template-columns: repeat(var(--columns), 1fr);
   gap: 30px;
 }
-.popular-item {
+.popular-list .popular-item {
   border-radius: 14px;
   overflow: hidden;
   background: #ffffff;
   box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
   border-radius: 14px;
 }
-.popular-label {
+.popular-list .popular-label {
   font-size: 12px;
   line-height: 15px;
   color: #f4f5f6;
@@ -156,62 +170,40 @@ body {
   right: 20px;
   transform: translate(0, 50%);
 }
-.popular-image {
+.popular-list .popular-image {
   height: 185px;
   position: relative;
 }
-.popular-img {
+.popular-list .popular-img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.popular-content {
+.popular-list .popular-content {
   padding: 14px 20px;
 }
-.popular-time {
+.popular-list .popular-time {
   display: inline-block;
   color: var(--text-color);
   font-size: 12px;
   margin-bottom: 8px;
 }
-.popular-title {
+.popular-list .popular-title {
   color: var(--text-color);
   margin-bottom: 9px;
 }
-.popular-review {
+.popular-list .popular-review {
   display: flex;
   align-items: center;
   color: var(--secondary-color);
   gap: 8px;
 }
 
-/* gemlist */
-.gem-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 300px) 150px;
-  gap: 15px;
-}
-.img-gem {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.gem-item:first-child {
-  grid-column: 1/3;
-  grid-row: 1/3;
-}
-.gem-item:nth-child(3) {
-  grid-column: 1/2;
-}
-.gem-item:last-child {
-  grid-row: -1/-3;
-}
 /* diaomond */
 .section-diamond .tour-heading {
   text-align: center;
 }
+
 .diamond-list {
   max-width: 998px;
   margin: 0 auto;
@@ -220,6 +212,7 @@ body {
   grid-template-rows: repeat(2, 250px);
   gap: 30px;
 }
+
 .diamond-item {
   padding: 12px;
   background: #ffffff;
@@ -227,65 +220,54 @@ body {
   border-radius: 14px;
   position: relative;
 }
+
 .diamond-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
   border-radius: inherit;
 }
+
 .diamond-list .img-diamond {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
 }
+
 .diamond-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    8.83deg,
-    rgba(0, 0, 0, 0.56) 22.88%,
-    rgba(0, 0, 0, 0) 58.17%
-  );
+  background: linear-gradient(8.83deg, rgba(0, 0, 0, 0.56) 22.88%, rgba(0, 0, 0, 0) 58.17%);
   border-radius: inherit;
 }
+
 .diamond-desc {
   position: absolute;
   bottom: 20px;
   left: 30px;
 }
+
 .diamond-time {
   color: #e6e8ec;
   font-size: 14px;
 }
+
 .diamond-title {
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 24px;
   color: white;
 }
+
 .diamond-btn {
   margin: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.btn-travel {
-  width: 200px;
-  height: 56px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 40px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 30px;
 }
 
 .section-footer {
@@ -311,6 +293,7 @@ body {
 .footer-columns .footer-logo {
   margin-bottom: 40px;
 }
+
 .footer-logo a {
   display: inline-block;
 }
@@ -320,6 +303,7 @@ body {
   align-items: center;
   position: relative;
 }
+
 .subscribe-input {
   padding: 13px 26px;
   border: 2px solid #e6e8ec;
@@ -337,6 +321,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
 }
+
 .subscribe-btn {
   cursor: pointer;
   position: absolute;
@@ -352,6 +337,7 @@ body {
   line-height: 1.5;
   color: #353945;
 }
+
 .footer-list {
   list-style: none;
 }
@@ -361,6 +347,7 @@ body {
   flex-direction: column;
   margin-bottom: 14px;
 }
+
 .footer-link {
   font-size: 16px;
   line-height: 1.5;
@@ -375,6 +362,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .footer-bottom .footer-copyright {
   font-size: var(--fzdefault);
   line-height: 20px;
@@ -387,12 +375,60 @@ body {
   gap: 20px;
 }
 
+/* gemlist */
+.gem-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px) 150px;
+  gap: 15px;
+}
+
+.img-gem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gem-item:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.gem-item:nth-child(3) {
+  grid-column: 1/2;
+}
+
+.gem-item:last-child {
+  grid-row: -1/-3;
+}
+
+.btn-travel {
+  width: 200px;
+  height: 56px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 30px;
+}
+
+.section-gem,
+.section-popular,
+.section-tour {
+  margin-bottom: 70px;
+}
+
 @media screen and (min-width: 768px) {
   .footer-columns:first-child {
     max-width: 270px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
   .tour-item {
     width: calc(50% - 20px);
@@ -401,7 +437,6 @@ body {
     --columns: 2;
   }
 }
-
 @media screen and (max-width: 767.98px) {
   .gem-list {
     grid-template-rows: repeat(2, 150px) 100px;
@@ -460,3 +495,5 @@ body {
     gap: 20px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

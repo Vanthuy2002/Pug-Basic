@@ -1,0 +1,98 @@
+.section-footer {
+  padding: 70px 0;
+}
+
+.footer-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer-header {
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.footer-columns .footer-logo {
+  margin-bottom: 40px;
+}
+.footer-logo a {
+  display: inline-block;
+}
+
+.footer-subscribe {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.subscribe-input {
+  padding: 13px 26px;
+  border: 2px solid #e6e8ec;
+  border-radius: 24px;
+  font-size: 16px;
+  color: var(--secondary-color);
+  background-color: transparent;
+  outline: none;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.subscribe-input::placeholder {
+  color: #b1b5c3;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.subscribe-btn {
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  right: 8px;
+  flex-shrink: 0;
+}
+
+.footer-columns .footer-desc {
+  margin: 0 0 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #353945;
+}
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+.footer-link {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  color: #777e90;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom .footer-copyright {
+  font-size: var(--fzdefault);
+  line-height: 20px;
+  color: #b1b5c3;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
