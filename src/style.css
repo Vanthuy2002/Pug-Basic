@@ -56,7 +56,7 @@ body {
   text-decoration: none;
   display: inline-block;
   padding: 10px 40px;
-  background-color: var(--primary-color);
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(255, 94, 247) 17.8%, rgb(2, 245, 255) 100.2%);
   color: white;
   border-radius: 30px;
 }
@@ -440,8 +440,24 @@ body {
   flex-wrap: nowrap;
 }
 
-.my-name span::before {
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #958afb;
+  position: relative;
+}
+.icon::before {
   content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  background-color: #07604a;
+  top: 0;
+  right: 0;
 }
 
 .section-footer {

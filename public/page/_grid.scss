@@ -11,8 +11,20 @@
   }
 }
 //ratio 1/1 là chia theo hình vuông
-.my-name {
-  span::before {
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #958afb;
+  position: relative;
+  &::before {
     content: "";
+    @include size(15px, 15px, 50%);
+    border: 1px solid #fff;
+    position: absolute;
+    background-color: #07604a;
+    top: 0;
+    right: 0;
   }
 }
