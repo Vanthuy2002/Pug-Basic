@@ -28,3 +28,45 @@
     right: 0;
   }
 }
+p.desc {
+  margin-top: 30px;
+  column-count: 3;
+  column-gap: 50px;
+  column-rule: 2px #958afb solid;
+}
+.box {
+  margin-top: 20px;
+  @include size(100px, 100px, 0);
+  background-color: #f62682;
+  // box-shadow: x y độ mờ scale màu
+  box-shadow: 2px 2px 5px 10px #ccc;
+}
+p.text {
+  margin-top: 20px;
+  text-indent: 10px;
+}
+
+p.overflow {
+  width: 200px;
+  height: 200px;
+  background-color: #f62682;
+  color: #fff;
+  overflow: auto;
+}
+
+.image-wraper {
+  margin-top: 20px;
+  width: 300px;
+  .ratio {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+}
+
+.image-item {
+  margin-top: 20px;
+  // width: min(50%, 400px);
+  // width: max(50%, 300px);
+  width: clamp(300px, 50%, 600px);
+  // tối thiểu 300px, trung bình 50%, tối đa 600px
+}

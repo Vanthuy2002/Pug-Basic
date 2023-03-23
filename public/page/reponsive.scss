@@ -9,10 +9,28 @@
     width: calc(50% - 20px);
   }
 }
+@media screen and (max-width: 767.98px) {
+  .tour-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 320px;
+    overflow-x: auto;
+    padding-bottom: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+  }
+  .tour-item {
+    scroll-snap-align: center;
+  }
+}
 
 @media screen and (max-width: 767.98px) {
   .gem-list {
     grid-template-rows: repeat(2, 150px) 100px;
+    grid-template-areas:
+      "h4 h4 h2"
+      "h4 h4 h5"
+      "h1 h3 h3";
   }
   .popular-item {
     width: 100%;
