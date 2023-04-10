@@ -95,14 +95,13 @@
         </div>
         <input type="radio" name="sex" />
       </label>
-  
+
       <label for="toggle">
         <input type="checkbox" name="status" id="toggle" />
         <div class="toggle-cus">
           <div class="toogle-spinner"></div>
         </div>
       </label>
-  
     </div>
     <!-- custom dropdown  -->
     <select name="" id="">
@@ -122,14 +121,18 @@
       </ul>
     </div>
 
+    <div class="transform">
+      <div class="transform-boxed"></div>
+    </div>
+
     <script>
       let imgs = document.querySelectorAll(".flex-item img");
       let check = document.querySelector("input[name='status']");
       check.onclick = () => {
         if (check.checked) {
-          console.log("da check");
+          console.log("checked");
         } else {
-          console.log("chua check");
+          console.log("non checked");
         }
       };
 
