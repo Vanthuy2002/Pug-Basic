@@ -70,3 +70,43 @@ p.overflow {
   width: clamp(300px, 50%, 600px);
   // tối thiểu 300px, trung bình 50%, tối đa 600px
 }
+
+.item-clamp {
+  // font-size: 40px;
+  // @include maxWidth(1023px) {
+  //   font-size: 30px;
+  // }
+  // @include maxWidth(767px) {
+  //   font-size: 16px;
+  // }
+  font-size: clamp(1.563rem, 2vw + 1rem, 2.5rem);
+}
+
+.card-wrapper {
+  container-type: inline-size;
+  container-name: card;
+  display: flex;
+}
+
+.card {
+  width: 400px;
+  padding: 14px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  .container-query {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@container card (max-width : 600px) {
+  flex-direction: column;
+  .card {
+    background-color: #ff6651;
+  }
+}
+
+//container query phụ thuộc vào cha chứa nó

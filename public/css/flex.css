@@ -1,0 +1,162 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.flex-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+  /* width là 300px , có thể dãn ra vì grow : 1 , hoặc nhỏ hơn 300px khi shink : 1*/
+}
+
+.flex-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active {
+  filter: blur(20px) contrast(80%);
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hide {
+  display: none;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.modal-content {
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  position: relative;
+  padding: 20px;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 100rem;
+  color: white;
+  background-color: #eeeeee;
+  padding: 5px;
+  transform: translate(50%, -50%);
+}
+.modal-main {
+  overscroll-behavior-y: contain;
+}
+
+/* //flex-shink : 0 -> không cho co lại ở width nào đó nếu thiết lập width or flex-basic
+1 -> cho phép co lại khi container nho lai
+
+flex-grow : 0 -> không cho dãn ra
+1 -> cho phép dãn ra khi container đủ lớn
+
+flex-basic : -> nếu flex-direction : row
+ flex-basic là width
+
+flex-basic : -> nếu flex-direction : column
+flex-basic : height */
+
+/* checkbox */
+.check {
+  margin-top: 20px;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid #e6e8ec;
+  border-radius: 7px;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#check1 {
+  display: none;
+}
+
+#check1:checked ~ .check {
+  background-color: #145ce6;
+  color: white;
+  border: none;
+}
+
+.toggle-cus {
+  cursor: pointer;
+  width: 90px;
+  height: 50px;
+  border-radius: 99px;
+  padding: 4px;
+  background-color: #e6e8ec;
+}
+.toogle-spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all linear 0.25s;
+}
+
+input[name="status"] {
+  display: none;
+}
+
+input[name="status"]:checked + .toggle-cus {
+  background-color: #145ce6;
+}
+input[name="status"]:checked + .toggle-cus .toogle-spinner {
+  transform: translateX(42px);
+}
