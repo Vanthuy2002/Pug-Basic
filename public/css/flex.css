@@ -112,6 +112,12 @@ flex-basic : -> nếu flex-direction : column
 flex-basic : height */
 
 /* checkbox */
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
 .check {
   margin-top: 20px;
   width: 24px;
@@ -159,4 +165,64 @@ input[name="status"]:checked + .toggle-cus {
 }
 input[name="status"]:checked + .toggle-cus .toogle-spinner {
   transform: translateX(42px);
+  background-color: #7bdfc7;
+}
+.drop-parent {
+  margin: 20px 0;
+  display: block;
+  width: 200px;
+  position: relative;
+}
+.drop {
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #353945;
+  font-size: 14px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drop-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 6px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.drop-list::before{
+  position: absolute;
+  content: "";
+  height: 40px;
+  top: -20px;
+  right: 0;
+  left: 0;
+}
+
+.drop-parent:hover .drop-list {
+  opacity: 1;
+  visibility: visible;
+}
+.drop-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.drop-item:hover {
+  background-color: #f4f5f9;
 }

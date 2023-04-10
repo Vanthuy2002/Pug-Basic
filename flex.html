@@ -72,36 +72,38 @@
       </div>
     </div>
 
-    <label for="check1">
-      <input type="checkbox" id="check1" />
-      <div class="check">
-        <svg
-          width="14"
-          height="10"
-          viewBox="0 0 14 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 5L5 9L13 1"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <input type="radio" name="sex" />
-    </label>
-
-    <label for="toggle">
-      <input type="checkbox" name="status" id="toggle" />
-      <div class="toggle-cus">
-        <div class="toogle-spinner"></div>
-      </div>
-    </label>
-
+    <div class="form">
+      <label for="check1">
+        <input type="checkbox" id="check1" />
+        <div class="check">
+          <svg
+            width="14"
+            height="10"
+            viewBox="0 0 14 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 5L5 9L13 1"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <input type="radio" name="sex" />
+      </label>
+  
+      <label for="toggle">
+        <input type="checkbox" name="status" id="toggle" />
+        <div class="toggle-cus">
+          <div class="toogle-spinner"></div>
+        </div>
+      </label>
+  
+    </div>
     <!-- custom dropdown  -->
     <select name="" id="">
       <option value="1">1</option>
@@ -110,6 +112,15 @@
       <option value="4">4</option>
       <option value="5">5</option>
     </select>
+
+    <div class="drop-parent">
+      <div class="drop">Day by Day</div>
+      <ul class="drop-list">
+        <li class="drop-item">Timeline</li>
+        <li class="drop-item">Calendar</li>
+        <li class="drop-item">Maps</li>
+      </ul>
+    </div>
 
     <script>
       let imgs = document.querySelectorAll(".flex-item img");
